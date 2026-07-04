@@ -2,7 +2,7 @@ const profile = {
   romanName: "WANG RUIYAO",
   kanaName: "オウ イッヨウ",
   school: "武蔵野美術大学 視覚伝達デザイン学科3年生",
-  portrait: "./about-profile.png",
+  portrait: "./profile-placeholder.jpg",
   bio:
     "ジェスチャー操作によって星座を描く体験型インタラクティブ作品、Web、タイポグラフィを中心に制作しています。小さな身体感覚や記憶の断片から、静かに手元へ残る視覚体験を探っています。",
   skills: ["Art Direction", "Interaction Design", "Web Design", "Type Design"],
@@ -18,7 +18,7 @@ const works = [
     category: "Game Design",
     date: "2025.10-12",
     tags: ["gesture UI", "game design"],
-    cover: "./tenohira-intro.png",
+    cover: "./work-01-cover.jpg",
     alt: "てのひら星座工房の仮カバー画像",
     summary:
       "指先の動きで星座を描き、手のひらの中に小さな夜空をつくる体験型作品。",
@@ -26,11 +26,11 @@ const works = [
       "ジェスチャー操作によって星座を描く体験型インタラクティブ作品です。プレイヤーの指先の動きをリアルタイムで解析し、その軌跡を星として可視化することで、身体の小さな動きと夜空のイメージを結びます。",
     images: [
       {
-        src: "./tenohira-slide-01.png",
+        src: "./detail-01-a.jpg",
         alt: "てのひら星座工房の展示記録用仮画像 1",
       },
       {
-        src: "./tenohira-slide-02.jpg",
+        src: "./detail-01-b.jpg",
         alt: "てのひら星座工房の展示記録用仮画像 2",
       },
     ],
@@ -43,7 +43,7 @@ const works = [
     category: "Web Design",
     date: "2025.4-7",
     tags: ["photography", "material study"],
-    cover: "./satou-display.png",
+    cover: "./work-03-cover.jpg",
     alt: "砂糖に宿る形の仮カバー画像",
     summary:
       "砂糖の結晶、溶け方、記憶の質感を観察する静かなWebアーカイブ。",
@@ -51,11 +51,11 @@ const works = [
       "日常的な素材である砂糖を、形、光、記憶の媒体として観察するWeb作品です。写真、短い文章、余白を組み合わせ、結晶が溶けていく時間の層を淡く記録します。",
     images: [
       {
-        src: "./satou-layout.png",
+        src: "./detail-03-a.jpg",
         alt: "砂糖に宿る形の詳細用仮画像 1",
       },
       {
-        src: "./satou-intro-display.png",
+        src: "./detail-03-b.jpg",
         alt: "砂糖に宿る形の詳細用仮画像 2",
       },
     ],
@@ -67,7 +67,7 @@ const works = [
     category: "Web Design",
     date: "2026.5-7",
     tags: ["copy writing", "web design"],
-    cover: "./ai-section-01.png",
+    cover: "./work-02-cover.jpg",
     alt: "AIは、花の匂いを知らないの仮カバー画像",
     summary:
       "自動化できるものと、身体や判断の揺らぎに残るものを扱うWebプロジェクト。",
@@ -75,11 +75,11 @@ const works = [
       "AIによる生成や判断が日常化する中で、人の手つき、迷い、時間のかかる観察に残る価値を再考するWebデザインです。画面上の余白とゆっくりした遷移で、情報を急がず読むための状態をつくります。",
     images: [
       {
-        src: "./ai-section-02.png",
+        src: "./detail-02-a.jpg",
         alt: "AIにはできないことの詳細用仮画像 1",
       },
       {
-        src: "./ai-section-03.png",
+        src: "./detail-02-b.jpg",
         alt: "AIにはできないことの詳細用仮画像 2",
       },
     ],
@@ -91,7 +91,7 @@ const works = [
     category: "Type Design",
     date: "2025.4-7",
     tags: ["typography", "type design"],
-    cover: "./typography-01.png",
+    cover: "./work-04-cover.jpg",
     alt: "タイポグラフィの仮カバー画像",
     summary:
       "文字の重心、余白、紙面上の沈黙を扱うタイポグラフィ実験。",
