@@ -17,7 +17,7 @@ function hero() {
     <section class="hero" aria-label="Portfolio hero">
       <video
         class="hero-video"
-        src="./hero-pv.mp4"
+        src="./hero-pv-1.mp4"
         autoplay
         muted
         playsinline
