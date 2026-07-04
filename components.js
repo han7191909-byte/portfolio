@@ -17,7 +17,7 @@ function hero() {
     <section class="hero" aria-label="Portfolio hero">
       <video
         class="hero-video"
-        src="./assets/hero-pv.mp4"
+        src="./hero-pv.mp4"
         autoplay
         muted
         playsinline
@@ -129,9 +129,9 @@ function detailPage(work) {
 
 function aiDetailPage(work) {
   const processImages = [
-    { src: "./assets/ai-section-01.png", alt: "AIは、花の匂いを知らない 目的説明" },
-    { src: "./assets/ai-section-02.png", alt: "AIは、花の匂いを知らない ターゲット説明" },
-    { src: "./assets/ai-section-03.png", alt: "AIは、花の匂いを知らない 作品企画説明" },
+    { src: "./ai-section-01.png", alt: "AIは、花の匂いを知らない 目的説明" },
+    { src: "./ai-section-02.png", alt: "AIは、花の匂いを知らない ターゲット説明" },
+    { src: "./ai-section-03.png", alt: "AIは、花の匂いを知らない 作品企画説明" },
   ];
 
   return `
@@ -186,9 +186,9 @@ function aiDetailPage(work) {
 
 function tenohiraDetailPage(work) {
   const slides = [
-    { src: "./assets/tenohira-slide-01.png", alt: "手のひら星座工房の体験写真" },
-    { src: "./assets/tenohira-slide-02.jpg", alt: "手のひら星座工房のゲーム画面 1" },
-    { src: "./assets/tenohira-slide-03.jpg", alt: "手のひら星座工房のゲーム画面 2" },
+    { src: "./tenohira-slide-01.png", alt: "手のひら星座工房の体験写真" },
+    { src: "./tenohira-slide-02.jpg", alt: "手のひら星座工房のゲーム画面 1" },
+    { src: "./tenohira-slide-03.jpg", alt: "手のひら星座工房のゲーム画面 2" },
   ];
 
   return `
@@ -208,7 +208,7 @@ function tenohiraDetailPage(work) {
       </section>
 
       <figure class="tenohira-video-frame">
-        <video src="./assets/hero-pv.mp4" muted playsinline preload="metadata" aria-label="手のひら星座工房 ゲームPV"></video>
+        <video src="./hero-pv.mp4" muted playsinline preload="metadata" aria-label="手のひら星座工房 ゲームPV"></video>
         <div class="tenohira-video-overlay">
           <button class="tenohira-video-play" type="button" data-cursor="link">ゲームPVを見る</button>
           <p>動画右下の音声をオンにしてご覧ください。</p>
@@ -242,7 +242,7 @@ function tenohiraDetailPage(work) {
 
     <section class="tenohira-night">
       <figure class="tenohira-reveal tenohira-title-image">
-        <img src="./assets/tenohira-title.png" alt="手のひら星座工房 タイトルビジュアル" loading="lazy" decoding="async" />
+        <img src="./tenohira-title.png" alt="手のひら星座工房 タイトルビジュアル" loading="lazy" decoding="async" />
       </figure>
 
       <section class="tenohira-research" aria-label="手のひら星座工房 作品調査">
@@ -267,11 +267,11 @@ function tenohiraDetailPage(work) {
             <h3>ゲームの世界観を作る</h3>
             <div class="research-image-pair">
               <figure>
-                <img src="./assets/tenohira-research-world-01.png" alt="我ら宇宙の塵の舞台写真" loading="lazy" decoding="async" />
+                <img src="./tenohira-research-world-01.png" alt="我ら宇宙の塵の舞台写真" loading="lazy" decoding="async" />
                 <figcaption>「我ら宇宙の塵」という演劇を見て　感動</figcaption>
               </figure>
               <figure>
-                <img src="./assets/tenohira-research-world-02.png" alt="星座と神話のリサーチ画像" loading="lazy" decoding="async" />
+                <img src="./tenohira-research-world-02.png" alt="星座と神話のリサーチ画像" loading="lazy" decoding="async" />
                 <figcaption>星座は人が星を結び、物語を与えることで生まれた。</figcaption>
               </figure>
             </div>
@@ -350,7 +350,7 @@ function tenohiraDetailPage(work) {
 function satouDetailPage(work) {
   const temperatures = ["120℃", "125℃", "125℃", "130℃", "135℃", "140℃", "145℃"];
   const floatingImages = temperatures.map((temperature, index) => ({
-    src: `./assets/satou-square-${String(index + 1).padStart(2, "0")}.png`,
+    src: `./satou-square-${String(index + 1).padStart(2, "0")}.png`,
     alt: `砂糖の結晶写真 ${index + 1}`,
     temperature,
   }));
@@ -379,7 +379,7 @@ function satouDetailPage(work) {
 
       <section class="satou-intro">
         <figure class="satou-book-image">
-          <img src="./assets/satou-intro-display.png" alt="砂糖作品の冊子を開いた展示写真" loading="lazy" decoding="async" />
+          <img src="./satou-intro-display.png" alt="砂糖作品の冊子を開いた展示写真" loading="lazy" decoding="async" />
         </figure>
         <div class="satou-text">
           <p>
@@ -396,10 +396,10 @@ function satouDetailPage(work) {
 
       <div class="satou-image-stack">
         <figure>
-          <img src="./assets/satou-layout.png" alt="砂糖作品の紙面展開" loading="lazy" decoding="async" />
+          <img src="./satou-layout.png" alt="砂糖作品の紙面展開" loading="lazy" decoding="async" />
         </figure>
         <figure>
-          <img src="./assets/satou-display.png" alt="砂糖作品の展示写真" loading="lazy" decoding="async" />
+          <img src="./satou-display.png" alt="砂糖作品の展示写真" loading="lazy" decoding="async" />
         </figure>
       </div>
     </main>
@@ -481,10 +481,10 @@ function aboutPage() {
     ${nav("about")}
     <main class="about-page">
       <figure class="about-image-block about-image-profile about-reveal" style="--about-delay: 80ms">
-        <img src="./assets/about-profile.png" alt="WANG RUIYAO profile information" loading="eager" decoding="async" />
+        <img src="./about-profile.png" alt="WANG RUIYAO profile information" loading="eager" decoding="async" />
       </figure>
       <figure class="about-image-block about-image-statement about-reveal" style="--about-delay: 280ms">
-        <img src="./assets/about-statement.png" alt="新しい体験と技術への興味を原動力に、デザインを通して人の心が動く瞬間を届けたい。" loading="eager" decoding="async" />
+        <img src="./about-statement.png" alt="新しい体験と技術への興味を原動力に、デザインを通して人の心が動く瞬間を届けたい。" loading="eager" decoding="async" />
       </figure>
       <footer class="thanks-section about-footer about-reveal" style="--about-delay: 520ms">
         <p>OIY.</p>
