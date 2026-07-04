@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="WANG RUIYAO personal portfolio with exhibition-like work archive."
+    />
+    <title>PORTFOLIO | WANG RUIYAO</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-nav" aria-label="Primary navigation">
+        <a class="nav-link nav-home is-active" href="./index.html">portfolio</a>
+        <a class="nav-link nav-work-main" href="#/works">works</a>
+        <a class="nav-link nav-about" href="#/about">about me</a>
+      </header>
+      <main class="fallback-page">
+        <section class="hero" aria-label="Portfolio hero">
+          <video
+            class="hero-video"
+            src="./assets/hero-pv.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            aria-label="てのひら星座工房 プロモーション映像"
+          ></video>
+        </section>
+        <section class="fallback-works" aria-label="Works">
+          <a class="fallback-work" href="#/work/tenohira-seiza-kobo">
+            <div class="work-info">
+              <div class="work-title"><span>#1</span><strong>てのひら星座工房</strong></div>
+              <div class="work-copy"><p>指先の動きで星座を描き、手のひらの中に小さな夜空をつくる体験型作品。</p></div>
+            </div>
+            <img src="./assets/work-01-cover.jpg" alt="てのひら星座工房の仮カバー画像" />
+          </a>
+          <a class="fallback-work" href="#/work/satou-ni-yadoru-katachi">
+            <div class="work-info">
+              <div class="work-title"><span>#2</span><strong>砂糖に宿る光のかたち</strong></div>
+              <div class="work-copy"><p>砂糖の結晶、溶け方、記憶の質感を観察する静かなWebアーカイブ。</p></div>
+            </div>
+            <img src="./assets/work-03-cover.jpg" alt="砂糖に宿る光のかたちの仮カバー画像" />
+          </a>
+          <a class="fallback-work" href="#/work/ai-niwa-dekinai-koto">
+            <div class="work-info">
+              <div class="work-title"><span>#3</span><strong>AIは、花の匂いを知らない</strong></div>
+              <div class="work-copy"><p>自動化できるものと、身体や判断の揺らぎに残るものを扱うWebプロジェクト。</p></div>
+            </div>
+            <img src="./assets/work-02-cover.jpg" alt="AIは、花の匂いを知らないの仮カバー画像" />
+          </a>
+          <a class="fallback-work" href="#/work/typography">
+            <div class="work-info">
+              <div class="work-title"><span>#4</span><strong>タイポグラフィ</strong></div>
+              <div class="work-copy"><p>文字の重心、余白、紙面上の沈黙を扱うタイポグラフィ実験。</p></div>
+            </div>
+            <img src="./assets/work-04-cover.jpg" alt="タイポグラフィの仮カバー画像" />
+          </a>
+        </section>
+      </main>
+    </div>
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-ring" aria-hidden="true"></div>
+    <script>
+      (function () {
+        var profile = {
+          romanName: "WANG RUIYAO",
+          kanaName: "オウ イッヨウ",
+          school: "武蔵野美術大学 視覚伝達デザイン学科3年生",
+          portrait: "./assets/profile-placeholder.jpg",
+          bio:
+            "ジェスチャー操作によって星座を描く体験型インタラクティブ作品、Web、タイポグラフィを中心に制作しています。小さな身体感覚や記憶の断片から、静かに手元へ残る視覚体験を探っています。",
+          skills: ["Art Direction", "Interaction Design", "Web Design", "Type Design"],
+          software: ["Figma", "Illustrator", "Photoshop", "After Effects", "Unity"],
+          contact: "ruiyao@example.com",
+        };
+
+        var works = [
+          {
+            id: "tenohira-seiza-kobo",
+            number: "1",
+            title: "てのひら星座工房",
+            category: "Game Design",
+            date: "2025.10-12",
+            tags: ["gesture UI", "game design"],
+            cover: "./assets/work-01-cover.jpg",
+            alt: "てのひら星座工房の仮カバー画像",
+            summary: "指先の動きで星座を描き、手のひらの中に小さな夜空をつくる体験型作品。",
+            description:
+              "ジェスチャー操作によって星座を描く体験型インタラクティブ作品です。プレイヤーの指先の動きをリアルタイムで解析し、その軌跡を星として可視化することで、身体の小さな動きと夜空のイメージを結びます。",
+            images: [
+              { src: "./assets/detail-01-a.jpg", alt: "てのひら星座工房の展示記録用仮画像 1" },
+              { src: "./assets/detail-01-b.jpg", alt: "てのひら星座工房の展示記録用仮画像 2" },
+            ],
+            video: "./assets/hero-pv.mp4",
+          },
+          {
+            id: "satou-ni-yadoru-katachi",
+            number: "2",
+            title: "砂糖に宿る光のかたち",
+            category: "Web Design",
+            date: "2025.4-7",
+            tags: ["photography", "material study"],
+            cover: "./assets/work-03-cover.jpg",
+            alt: "砂糖に宿る光のかたちの仮カバー画像",
+            summary: "身の回りにある最も日常的なものの中にも、美の可能性がたくさん潜んでいます。",
+            images: [
+              { src: "./assets/detail-03-a.jpg", alt: "砂糖に宿る光のかたちの詳細用仮画像 1" },
+              { src: "./assets/detail-03-b.jpg", alt: "砂糖に宿る光のかたちの詳細用仮画像 2" },
+            ],
+          },
+          {
+            id: "ai-niwa-dekinai-koto",
+            number: "3",
+            title: "AIは、花の匂いを知らない",
+            category: "Web Design",
+            date: "2026.5-7",
+            tags: ["copy writing", "web design"],
+            cover: "./assets/work-02-cover.jpg",
+            alt: "AIは、花の匂いを知らないの仮カバー画像",
+            summary: "人間は、世界を感じるために、遠い彼方から来たのではないか。",
+            images: [
+              { src: "./assets/detail-02-a.jpg", alt: "AIは、花の匂いを知らないの詳細用仮画像 1" },
+              { src: "./assets/detail-02-b.jpg", alt: "AIは、花の匂いを知らないの詳細用仮画像 2" },
+            ],
+          },
+          {
+            id: "typography",
+            number: "4",
+            title: "タイポグラフィ",
+            category: "Type Design",
+            date: "2025.4-7",
+            tags: ["typography", "type design"],
+            cover: "./assets/work-04-cover.jpg",
+            alt: "タイポグラフィの仮カバー画像",
+            summary: "『方丈記』冒頭部分を題材に制作した、開ひらがなの書体。",
+            images: [
+              { src: "./assets/typography-01.png", alt: "タイポグラフィの詳細用仮画像 1" },
+              { src: "./assets/typography-02.png", alt: "タイポグラフィの詳細用仮画像 2" },
+            ],
+          },
+        ];
+
+        var app = document.getElementById("app");
+        var teardown = function () {};
+        var autoScrollFrame = 0;
+        var scrollToWorksAfterRender = false;
+        var scrollToTopAfterRender = false;
+        var restoreHomeScrollAfterRender = false;
+
+        document.addEventListener("click", handleNavClick);
+
+        function nav(active, workTitle) {
+          var isAbout = active === "about";
+          var isWork = active !== "home" && active !== "about";
+          return (
+            '<header class="site-nav" aria-label="Primary navigation">' +
+            '<a class="nav-link nav-home ' +
+            (active === "home" ? "is-active" : "") +
+            '" href="#/" data-cursor="link">portfolio</a>' +
+            '<a class="nav-link nav-work-main ' +
+            (isWork ? "is-active" : "") +
+            '" href="#/works" data-cursor="link">works</a>' +
+            '<a class="nav-link nav-about ' +
+            (isAbout ? "is-active" : "") +
+            '" href="#/about" data-cursor="link">about me</a>' +
+            "</header>"
+          );
+        }
+
+        function homePage() {
+          var scrollStep = 1.75;
+          var scrollHeight = ((works.length - 1) * scrollStep + 1.02) * 100;
+          return (
+            nav("home") +
+            '<section class="hero" aria-label="Portfolio hero">' +
+            '<video class="hero-video" src="./assets/hero-pv.mp4" autoplay muted playsinline preload="metadata" aria-label="てのひら星座工房 プロモーション映像"></video>' +
+            "</section>" +
+            '<section class="stack-scroll" style="height:' +
+            scrollHeight +
+            'vh"><div class="works-heading"><h2>works</h2></div><div class="stack-stage" aria-label="Works">' +
+            works
+              .map(function (work, index) {
+                var tagHtml = (work.tags || ["programming", work.category.toLowerCase()])
+                  .map(function (tag) {
+                    return "<span>" + tag + "</span>";
+                  })
+                  .join("");
+                return (
+                  '<article class="work-panel" data-panel-index="' +
+                  index +
+                  '" style="z-index:' +
+                  (index + 1) +
+                  '">' +
+                  '<a class="work-hit-area" href="#/work/' +
+                  work.id +
+                  '" data-cursor="work" aria-label="' +
+                  work.title +
+                  ' の詳細を見る">' +
+                  '<div class="work-info"><div class="work-title"><span>#' +
+                  work.number +
+                  "</span><strong>" +
+                  work.title +
+                  '</strong></div><div class="work-body"><div class="work-copy"><p>' +
+                  work.summary +
+                  '</p><div class="work-tags">' +
+                  tagHtml +
+                  "</div></div>" +
+                  '<figure class="work-cover-wrap"><img class="work-cover" src="' +
+                  work.cover +
+                  '" alt="' +
+                  work.alt +
+                  '" loading="lazy" decoding="async"></figure></div></div>' +
+                  "</a></article>"
+                );
+              })
+              .join("") +
+            '</div></section><section class="thanks-section"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></section>'
+          );
+        }
+
+        function detailPage(work) {
+          if (work.id === "tenohira-seiza-kobo") {
+            return tenohiraDetailPage(work);
+          }
+
+          if (work.id === "ai-niwa-dekinai-koto") {
+            return aiDetailPage(work);
+          }
+
+          if (work.id === "satou-ni-yadoru-katachi") {
+            return satouDetailPage(work);
+          }
+
+          if (work.id === "typography") {
+            return typographyDetailPage(work);
+          }
+
+          return (
+            nav(work.id, work.title) +
+            '<main class="detail-page"><figure class="detail-hero"><img src="' +
+            work.cover +
+            '" alt="' +
+            work.alt +
+            '" loading="eager" decoding="async"></figure>' +
+            '<section class="detail-text"><p class="detail-kicker">' +
+            work.category +
+            " / " +
+            work.date +
+            "</p><h1>" +
+            work.title +
+            "</h1><p>" +
+            work.description +
+            '</p></section><div class="detail-grid">' +
+            work.images
+              .map(function (image) {
+                return '<figure><img src="' + image.src + '" alt="' + image.alt + '" loading="lazy" decoding="async"></figure>';
+              })
+              .join("") +
+            '</div><section class="detail-text"><p>' +
+            work.summary +
+            "</p><p>展示空間での見え方、画面上の余白、鑑賞者の距離を意識しながら、静かに長く見られる構成を目指しました。画像と文章はすべてデータファイルから差し替えできます。</p></section>" +
+            (work.video
+              ? '<video class="detail-video" src="' +
+                work.video +
+                '" controls muted playsinline preload="metadata" aria-label="' +
+                work.title +
+                ' の映像"></video>'
+              : "") +
+            '<a class="back-link" href="#/" data-cursor="link">Back to Works</a></main>'
+          );
+        }
+
+        function aiDetailPage(work) {
+          var processImages = [
+            { src: "./assets/ai-section-01.png", alt: "AIは、花の匂いを知らない 目的説明" },
+            { src: "./assets/ai-section-02.png", alt: "AIは、花の匂いを知らない ターゲット説明" },
+            { src: "./assets/ai-section-03.png", alt: "AIは、花の匂いを知らない 作品企画説明" },
+          ];
+
+          return (
+            nav(work.id, work.title) +
+            '<main class="ai-detail"><section class="ai-head"><h1>AIは、花の匂いを知らない</h1><div class="ai-meta">' +
+            '<p><span>制作時期</span><span>2026.6-</span></p>' +
+            '<p><span>授業名</span><span>言葉から発想するクリエイティブ</span></p>' +
+            '<p><span>授業課題</span><span>世の中に向けた「メッセージコピー」</span></p>' +
+            '<div class="ai-pills"><span>copy</span></div></div></section>' +
+            '<section class="ai-poem" aria-label="AIは、花の匂いを知らない 本文">' +
+            '<div class="ai-poem-lead ai-reveal" style="--reveal-index: 0"><p>AIは、</p><p>花の匂いを知らない、</p><p>風を感じたこともない。</p><p>だから私は、</p><p>人間として存在することに意味があると思う。</p></div>' +
+            '<div class="ai-poem-body">' +
+            '<p class="ai-reveal" style="--reveal-index: 1">AIはいろんなことを知っている。<br>花の名前も詳しいし、<br>風の仕組みもよくわかっている。</p>' +
+            '<p class="ai-reveal" style="--reveal-index: 2">けれど、<br>花の匂いを感じることも、<br>風の気持ちよさを感じたこともない。</p>' +
+            '<p class="ai-reveal" style="--reveal-index: 3">そう考えると、<br>人間は、世界を感じるために、<br>遠い彼方から来たんじゃないか。</p>' +
+            '<p class="ai-reveal" style="--reveal-index: 4">夕焼けに染まる道を歩きたい。<br>咲き始めた沈丁花の匂いに気づきたい。<br>窓を開けた瞬間に吹き込む風を感じたい。</p>' +
+            '<p class="ai-reveal" style="--reveal-index: 5">私たちは、<br>そのような瞬間に心を動かされる。<br>人間が存在する意味なんで、<br>案外そういう瞬間にあるのではないかと思った。</p>' +
+            '</div></section><section class="ai-process" aria-label="AIは、花の匂いを知らない 企画説明">' +
+            processImages
+              .map(function (image, index) {
+                return '<figure class="ai-process-image ai-reveal" style="--reveal-index: ' + (index + 6) + '"><img src="' + image.src + '" alt="' + image.alt + '" loading="lazy" decoding="async"></figure>';
+              })
+              .join("") +
+            '</section></main><footer class="thanks-section ai-footer"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></footer>'
+          );
+        }
+
+        function tenohiraDetailPage(work) {
+          var slides = [
+            { src: "./assets/tenohira-slide-01.png", alt: "手のひら星座工房の体験写真" },
+            { src: "./assets/tenohira-slide-02.jpg", alt: "手のひら星座工房のゲーム画面 1" },
+            { src: "./assets/tenohira-slide-03.jpg", alt: "手のひら星座工房のゲーム画面 2" },
+          ];
+
+          return (
+            nav(work.id, work.title) +
+            '<main class="tenohira-detail">' +
+            '<section class="tenohira-head"><h1>手のひら星座工房</h1><div class="tenohira-meta">' +
+            '<p><span>制作時期</span><span>2025.10-12</span></p>' +
+            '<p><span>授業制作</span><span>授業名：トイデザイン</span></p>' +
+            '<p><span>授業課題</span><span>新しいおもちゃをつくる</span></p>' +
+            '<div class="tenohira-pills"><span>programming</span><span>game design</span></div>' +
+            "</div></section>" +
+            '<figure class="tenohira-video-frame"><video src="./assets/hero-pv.mp4" muted playsinline preload="metadata" aria-label="手のひら星座工房 ゲームPV"></video><div class="tenohira-video-overlay"><button class="tenohira-video-play" type="button" data-cursor="link">ゲームPVを見る</button><p>動画右下の音声をオンにしてご覧ください。</p></div></figure>' +
+            '<section class="tenohira-copy-layout"><div class="tenohira-game-link">' +
+            '<a href="https://han7191909-byte.github.io/toydesign.github.io/" target="_blank" rel="noopener noreferrer" data-cursor="link">ゲームページへ</a>' +
+            "<p>※ジェスチャー認識にはカメラの使用許可が必要です。</p>" +
+            "<p>※BGMを再生するには、画面を一度クリックしてください。</p>" +
+            "<p>お時間がございましたら、ぜひご体験ください！</p>" +
+            '</div><div class="tenohira-copy"><section><h2>コンセプト</h2>' +
+            "<p>ジェスチャー操作によって星座を描く体験型インタラクティブ作品。プレイヤーの指先の動きをリアルタイムで解析し、その軌跡を星として可視化することで、点と点がつながり、一つの星座が浮かび上がる。プレイヤーはかたちを手がかりに想像力を広げ、自分だけの物語を描きながら星座を制作していく体験を設計した。</p>" +
+            "</section><section><h2>発想のきっかけ</h2>" +
+            "<p>昔話にとって、星たちがゲームは想像力を引き出し、創作の楽しさを感じさせてくれる存在である。プログラミングによって身体の動きの軌跡を可視化し、それを星として再構成することで、手の動きそのものが星座の素材になる体験を目指した。</p>" +
+            "</section></div></section></main>" +
+            '<section class="tenohira-night">' +
+            '<figure class="tenohira-reveal tenohira-title-image"><img src="./assets/tenohira-title.png" alt="手のひら星座工房 タイトルビジュアル" loading="lazy" decoding="async"></figure>' +
+            '<section class="tenohira-research" aria-label="手のひら星座工房 作品調査">' +
+            '<div class="research-line tenohira-reveal" style="--reveal-index: 0"><span class="research-label">課題</span><span class="research-pill research-pill-wide">新しいおもちゃを作る</span></div>' +
+            '<div class="research-line tenohira-reveal" style="--reveal-index: 1"><span class="research-label">リサーチ</span></div>' +
+            '<div class="research-two-column"><section class="research-block tenohira-reveal" style="--reveal-index: 2"><h3>新しいおもちゃを調査する</h3><div class="research-circles" aria-label="新しさの要素"><span>技術・素材の<br>新しさ</span><span>おもちゃの構造<br>ゲームの仕組み</span><span>コンセプト・概念<br>の新しさ</span></div><p>新しいと感じる要素を分解する</p></section>' +
+            '<section class="research-block tenohira-reveal" style="--reveal-index: 3"><h3>ゲームの世界観を作る</h3><div class="research-image-pair"><figure><img src="./assets/tenohira-research-world-01.png" alt="我ら宇宙の塵の舞台写真" loading="lazy" decoding="async"><figcaption>「我ら宇宙の塵」という演劇を見て　感動</figcaption></figure><figure><img src="./assets/tenohira-research-world-02.png" alt="星座と神話のリサーチ画像" loading="lazy" decoding="async"><figcaption>星座は人が星を結び、物語を与えることで生まれた。</figcaption></figure></div></section></div>' +
+            '<div class="research-game tenohira-reveal" style="--reveal-index: 4"><div><span class="research-label">ゲームを作る</span><div class="research-design-map"><div class="research-design-circle">体験デザイン</div><span class="research-design-pill research-design-pill-a">ジェスチャーUI</span><span class="research-design-pill research-design-pill-b">ユーザーの納得感</span><span class="research-design-pill research-design-pill-c">世界観への没入感</span></div></div><div class="research-feedback"><h3>ユーザーからのフィードバック重視</h3><p>手のジェスチャー操作指示のわかりやすさ</p><p>カメラによるジェスチャー認識のため、手の位置を把握しやすくする仕組み</p><p class="is-group-break">線の生成アルゴリズム：星座らしい形になるよう接続・切断のルールの設計</p><p>世界観を支える3D空間デザイン</p></div></div>' +
+            '</section>' +
+            '<section class="tenohira-carousel tenohira-reveal" aria-label="手のひら星座工房 作品写真スライダー"><div class="tenohira-carousel-window"><div class="tenohira-carousel-track">' +
+            slides
+              .map(function (slide) {
+                return '<figure class="tenohira-slide"><img src="' + slide.src + '" alt="' + slide.alt + '" loading="lazy" decoding="async"></figure>';
+              })
+              .join("") +
+            '</div><div class="tenohira-carousel-controls"><button class="tenohira-arrow tenohira-arrow-prev" type="button" aria-label="前の画像" data-cursor="link"><span class="arrow-line arrow-line-top"></span><span class="arrow-line arrow-line-bottom"></span><span class="arrow-dot arrow-dot-a"></span><span class="arrow-dot arrow-dot-b"></span><span class="arrow-dot arrow-dot-c"></span></button><button class="tenohira-arrow tenohira-arrow-next" type="button" aria-label="次の画像" data-cursor="link"><span class="arrow-line arrow-line-top"></span><span class="arrow-line arrow-line-bottom"></span><span class="arrow-dot arrow-dot-a"></span><span class="arrow-dot arrow-dot-b"></span><span class="arrow-dot arrow-dot-c"></span></button></div></div><div class="tenohira-dots" aria-hidden="true">' +
+            slides
+              .map(function (_, index) {
+                return '<span class="' + (index === 0 ? "is-active" : "") + '"></span>';
+              })
+              .join("") +
+            "</div></section>" +
+            '<section class="tenohira-tools tenohira-reveal"><p>基礎的なステージの構築：p5.js</p><p>音声の動きや演出・視覚効果の調整：Visual Studio Code・Cursor</p><p>コード実装で使用したAI：ChatGPT / Gemini / Cursor / Claude</p></section>' +
+            "</section>" +
+            '<footer class="thanks-section tenohira-footer"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></footer>'
+          );
+        }
+
+        function satouDetailPage(work) {
+          var temperatures = ["120℃", "125℃", "125℃", "130℃", "135℃", "140℃", "145℃"];
+          var floatingImages = temperatures.map(function (temperature, index) {
+            return {
+              src: "./assets/satou-square-" + String(index + 1).padStart(2, "0") + ".png",
+              alt: "砂糖の結晶写真 " + (index + 1),
+              temperature: temperature,
+            };
+          });
+
+          return (
+            nav(work.id, work.title) +
+            '<main class="satou-detail">' +
+            '<section class="satou-hero" aria-label="砂糖に宿る光のかたち">' +
+            '<div class="satou-title-block"><h1>砂糖に宿る光のかたち</h1><p>Light Residing in Sugar</p></div>' +
+            '<div class="satou-floating-grid">' +
+            floatingImages
+              .map(function (image, index) {
+                return (
+                  '<button class="satou-float-card satou-float-' +
+                  (index + 1) +
+                  '" type="button" data-src="' +
+                  image.src +
+                  '" data-alt="' +
+                  image.alt +
+                  '" data-cursor="work" style="--float-index:' +
+                  index +
+                  '">' +
+                  '<img src="' +
+                  image.src +
+                  '" alt="' +
+                  image.alt +
+                  '" loading="lazy" decoding="async"><span>' +
+                  image.temperature +
+                  "</span></button>"
+                );
+              })
+              .join("") +
+            "</div></section>" +
+            '<section class="satou-intro"><figure class="satou-book-image"><img src="./assets/satou-intro-display.png" alt="砂糖作品の冊子を開いた展示写真" loading="lazy" decoding="async"></figure>' +
+            '<div class="satou-text">' +
+            "<p>砂糖は加熱によって少しずつ姿を変え、やがて琥珀のように透き通った結晶になり、さらに光にかざすと、ふだんは見えない細かな美しい模様がうかび上がります。</p>" +
+            "<p>温度や固まり方のちがいによって、影の色や形は毎回少しずつ変わり、同じものは二度と生まれません。そこから私は、無限に広がる美しさを感じ取りました。その一瞬ごとの影を一冊の本に集めて、展示にまとめました。</p>" +
+            "<p>私たちが最初に目にする姿は、物の全体像ではないかもしれません。光や水などの媒介を通して、多くのものが想像できない現象として立ち現れるのです。身の回りにある最も日常的なものの中にも、美の可能性がたくさん潜んでいます。</p>" +
+            "</div></section>" +
+            '<div class="satou-image-stack"><figure><img src="./assets/satou-layout.png" alt="砂糖作品の紙面展開" loading="lazy" decoding="async"></figure><figure><img src="./assets/satou-display.png" alt="砂糖作品の展示写真" loading="lazy" decoding="async"></figure></div>' +
+            "</main>" +
+            '<div class="satou-lightbox" aria-hidden="true"><button class="satou-lightbox-backdrop" type="button" aria-label="画像を閉じる"></button><img src="" alt=""></div>' +
+            '<footer class="thanks-section satou-footer"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></footer>'
+          );
+        }
+
+        function typographyDetailPage(work) {
+          return (
+            nav(work.id, work.title) +
+            '<main class="typography-detail">' +
+            '<section class="typography-head"><h1>Typography</h1><div class="typography-meta">' +
+            '<p><span>制作時間</span><span>2024.4-9</span></p>' +
+            '<p><span>課題制作</span><span>授業名：タイポグラフィ</span></p>' +
+            '<div class="typography-pills"><span>typography</span><span>type design</span></div>' +
+            "</div></section>" +
+            '<figure class="typography-main-image"><img src="' +
+            work.cover +
+            '" alt="' +
+            work.alt +
+            '" loading="eager" decoding="async"></figure>' +
+            '<section class="typography-copy-block"><p class="typography-caption">ゆく川の流れは 絶えずして しかも元の水にあらず　淀みに浮かぶうたかたは かつ消え　かつ結びて</p>' +
+            '<div class="typography-concept"><h2>コンセプト</h2>' +
+            '<p>『方丈記』冒頭部分を題材に制作した、開ひらがなの書体。</p>' +
+            '<p>水の流れを通して無常を描く『方丈記』の世界観から着想し、素早く流れるような筆運びと、軽やかな線の動きを意識した。一部の線を細く長く伸ばすことで、流れ続ける水の感覚と、形をとどめず移ろっていく無常感を表現している。全体としては重さを抑え、軽やかでありながらも、文字としての静かな存在感が残る書体を目指した。</p>' +
+            '<p>背景には、中国の青城山で撮影した写真を使用した。</p></div></section>' +
+            '<div class="typography-image-stack">' +
+            work.images
+              .map(function (image) {
+                return '<figure><img src="' + image.src + '" alt="' + image.alt + '" loading="lazy" decoding="async"></figure>';
+              })
+              .join("") +
+            "</div></main>" +
+            '<footer class="thanks-section typography-footer"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></footer>'
+          );
+        }
+
+        function aboutPage() {
+          return (
+            nav("about") +
+            '<main class="about-page"><figure class="about-image-block about-image-profile about-reveal" style="--about-delay: 80ms"><img src="./assets/about-profile.png" alt="WANG RUIYAO profile information" loading="eager" decoding="async"></figure><figure class="about-image-block about-image-statement about-reveal" style="--about-delay: 280ms"><img src="./assets/about-statement.png" alt="新しい体験と技術への興味を原動力に、デザインを通して人の心が動く瞬間を届けたい。" loading="eager" decoding="async"></figure><footer class="thanks-section about-footer about-reveal" style="--about-delay: 520ms"><p>OIY.</p><p>Department of Visual Communication Design</p><p>han7191909@gmail.com</p></footer></main>'
+          );
+        }
+
+        function render() {
+          if (autoScrollFrame) {
+            cancelAnimationFrame(autoScrollFrame);
+            autoScrollFrame = 0;
+          }
+          teardown();
+          var route = window.location.hash.replace(/^#\/?/, "");
+          var parts = route.split("/");
+          var page = parts[0];
+          var id = parts[1];
+
+          if (page === "about") {
+            app.innerHTML = aboutPage();
+            teardown = setupCursor();
+            return;
+          }
+
+          if (page === "work") {
+            var work = works.filter(function (item) {
+              return item.id === id;
+            })[0] || works[0];
+            app.innerHTML = detailPage(work);
+            setupTenSecondVideoLoop(document.querySelector(".detail-video"));
+            var destroyCursor = setupCursor();
+            var destroySatou = work.id === "satou-ni-yadoru-katachi" ? setupSatouLightbox() : function () {};
+            var destroyTenohira = work.id === "tenohira-seiza-kobo" ? setupTenohiraDetail() : function () {};
+            var destroyAi = work.id === "ai-niwa-dekinai-koto" ? setupAiDetail() : function () {};
+            teardown = function () {
+              destroyCursor();
+              destroySatou();
+              destroyTenohira();
+              destroyAi();
+            };
+            window.scrollTo(0, 0);
+            return;
+          }
+
+          app.innerHTML = homePage();
+          setupTenSecondVideoLoop(document.querySelector(".hero-video"));
+          var destroyStack = setupWorkStack();
+          var destroyCursor = setupCursor();
+          teardown = function () {
+            destroyStack();
+            destroyCursor();
+          };
+
+          if (restoreHomeScrollAfterRender) {
+            restoreHomeScrollAfterRender = false;
+            requestAnimationFrame(restoreHomeScrollPosition);
+            return;
+          }
+
+          if (scrollToTopAfterRender) {
+            scrollToTopAfterRender = false;
+            requestAnimationFrame(function () {
+              slowScrollTo(0, 900);
+            });
+            return;
+          }
+
+          if (scrollToWorksAfterRender) {
+            scrollToWorksAfterRender = false;
+            requestAnimationFrame(scrollToWorks);
+          }
+        }
+
+        function handleNavClick(event) {
+          var workLink = event.target.closest('a[href^="#/work/"]');
+          if (workLink) {
+            var currentRoute = window.location.hash.replace(/^#\/?/, "");
+            if (currentRoute === "" || currentRoute === "works") {
+              saveHomeScrollPosition();
+            }
+            return;
+          }
+
+          var worksLink = event.target.closest(".nav-work-main");
+          if (worksLink) {
+            event.preventDefault();
+            scrollToWorksAfterRender = true;
+            scrollToTopAfterRender = false;
+            restoreHomeScrollAfterRender = false;
+            var worksRoute = window.location.hash.replace(/^#\/?/, "");
+            if (worksRoute === "" || worksRoute === "works") {
+              if (window.location.hash === "#/works") {
+                scrollToWorksAfterRender = false;
+                requestAnimationFrame(scrollToWorks);
+              } else {
+                window.location.hash = "#/works";
+              }
+            } else {
+              window.location.hash = "#/works";
+            }
+            return;
+          }
+
+          var homeLink = event.target.closest(".nav-home");
+          if (!homeLink) return;
+
+          event.preventDefault();
+          scrollToWorksAfterRender = false;
+          scrollToTopAfterRender = true;
+          restoreHomeScrollAfterRender = false;
+          var homeRoute = window.location.hash.replace(/^#\/?/, "");
+          if (homeRoute.indexOf("work") === 0) {
+            scrollToTopAfterRender = false;
+            restoreHomeScrollAfterRender = true;
+            window.location.hash = "#/";
+            return;
+          }
+
+          if (homeRoute === "" || homeRoute === "works") {
+            if (window.location.hash === "#/" || window.location.hash === "") {
+              scrollToTopAfterRender = false;
+              slowScrollTo(0, 900);
+            } else {
+              window.location.hash = "#/";
+            }
+          } else {
+            window.location.hash = "#/";
+          }
+        }
+
+        function saveHomeScrollPosition() {
+          try {
+            sessionStorage.setItem("portfolioHomeScrollY", String(window.scrollY));
+          } catch (_) {}
+        }
+
+        function restoreHomeScrollPosition() {
+          var targetTop = 0;
+          try {
+            targetTop = Number(sessionStorage.getItem("portfolioHomeScrollY")) || 0;
+          } catch (_) {}
+          window.scrollTo(0, targetTop);
+        }
+
+        function scrollToWorks() {
+          var section = document.querySelector(".stack-scroll");
+          if (!section) return;
+          var targetTop = section.getBoundingClientRect().top + window.scrollY + window.innerHeight * 0.18;
+          slowScrollTo(targetTop, 1600);
+        }
+
+        function slowScrollTo(targetTop, duration) {
+          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          if (reduceMotion) {
+            window.scrollTo(0, targetTop);
+            return;
+          }
+
+          var startTop = window.scrollY;
+          var distance = targetTop - startTop;
+          var startTime = performance.now();
+          var scrollDuration = duration || 1600;
+
+          function ease(progress) {
+            return 1 - Math.pow(1 - progress, 3);
+          }
+
+          function step(now) {
+            var progress = Math.min((now - startTime) / scrollDuration, 1);
+            window.scrollTo(0, startTop + distance * ease(progress));
+            if (progress < 1) {
+              autoScrollFrame = requestAnimationFrame(step);
+            } else {
+              autoScrollFrame = 0;
+            }
+          }
+
+          autoScrollFrame = requestAnimationFrame(step);
+        }
+
+        function setupTenSecondVideoLoop(video) {
+          if (!video) return;
+          video.addEventListener("timeupdate", function () {
+            if (video.currentTime >= 10) {
+              video.currentTime = 0;
+              video.play().catch(function () {});
+            }
+          });
+          if (video.play) video.play().catch(function () {});
+        }
+
+        function setupWorkStack() {
+          var section = document.querySelector(".stack-scroll");
+          var panels = Array.prototype.slice.call(document.querySelectorAll(".work-panel"));
+          if (!section || !panels.length) return function () {};
+          var ticking = false;
+
+          function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+          }
+
+          function update() {
+            ticking = false;
+            var rect = section.getBoundingClientRect();
+            var viewport = window.innerHeight;
+            var rootStyle = getComputedStyle(document.documentElement);
+            var navHeight = parseFloat(rootStyle.getPropertyValue("--nav-h")) || 58;
+            var collapsedRow = parseFloat(rootStyle.getPropertyValue("--work-row-h")) || 64;
+            var scrollStep = 1.75;
+            var raw = clamp(-rect.top / (viewport * scrollStep), 0, panels.length - 1);
+            var stageHeight = Math.max(1, viewport - navHeight);
+            var expandedInfo = Math.max(360, stageHeight - 8);
+            document.documentElement.classList.toggle("is-work-mode", raw > 0.08);
+
+            panels.forEach(function (panel, index) {
+              var local = raw - index;
+              var incoming = clamp(local + 1, 0, 1);
+              var covered = clamp(raw - index, 0, 1);
+              var visualCovered = index === 0 ? clamp((covered - 0.18) / 0.82, 0, 1) : covered;
+              var stackedOffset = index * collapsedRow;
+              var y = index === 0 ? 0 : stackedOffset + (1 - incoming) * (stageHeight - stackedOffset);
+              var infoSize = expandedInfo - covered * (expandedInfo - collapsedRow);
+              var titleScale = 1 - covered * 0.5;
+              var titleCol = 64 - covered * 32;
+              var titleGap = 18 - covered * 9;
+              var padY = 20 - covered * 14;
+              var padX = 48 - covered * 24;
+              var padBottom = 22 - covered * 16;
+              var workBlur = visualCovered * 22;
+              var bodyVisibility = Math.max(0.12, 1 - visualCovered * 0.88);
+
+              panel.style.setProperty("--panel-y", y + "px");
+              panel.style.setProperty("--info-size", infoSize + "px");
+              panel.style.setProperty("--title-scale", titleScale.toFixed(3));
+              panel.style.setProperty("--title-col", titleCol + "px");
+              panel.style.setProperty("--title-gap", titleGap + "px");
+              panel.style.setProperty("--info-pad-y", padY + "px");
+              panel.style.setProperty("--info-pad-x", padX + "px");
+              panel.style.setProperty("--info-pad-bottom", padBottom + "px");
+              panel.style.setProperty("--work-blur", workBlur.toFixed(2) + "px");
+              panel.style.setProperty("--body-visibility", bodyVisibility);
+              panel.classList.toggle("is-covered", covered > 0.04);
+              panel.classList.toggle("is-current", local >= -0.02 && local < 0.98);
+            });
+          }
+
+          function requestUpdate() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(update);
+          }
+
+          update();
+          window.addEventListener("scroll", requestUpdate, { passive: true });
+          window.addEventListener("resize", requestUpdate);
+          return function () {
+            window.removeEventListener("scroll", requestUpdate);
+            window.removeEventListener("resize", requestUpdate);
+            document.documentElement.classList.remove("is-work-mode");
+          };
+        }
+
+        function setupAiDetail() {
+          return setupScrollProgressReveal(".ai-reveal");
+        }
+
+        function setupScrollProgressReveal(selector) {
+          var revealItems = Array.prototype.slice.call(document.querySelectorAll(selector));
+          if (!revealItems.length) return function () {};
+          var raf = 0;
+
+          function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+          }
+
+          function update() {
+            var viewport = window.innerHeight || 1;
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            revealItems.forEach(function (item, index) {
+              if (reduceMotion) {
+                item.style.setProperty("--reveal-progress", "1");
+                return;
+              }
+              var rect = item.getBoundingClientRect();
+              var stagger = (Number.parseFloat(item.style.getPropertyValue("--reveal-index")) || index) * 0.025;
+              var raw = (viewport * 0.92 - rect.top) / (viewport * 0.52);
+              var progress = clamp(raw - stagger, 0, 1);
+              item.style.setProperty("--reveal-progress", progress.toFixed(3));
+            });
+            raf = requestAnimationFrame(update);
+          }
+
+          update();
+          return function () {
+            cancelAnimationFrame(raf);
+          };
+        }
+
+        function setupTenohiraDetail() {
+          var revealItems = Array.prototype.slice.call(document.querySelectorAll(".tenohira-reveal"));
+          var video = document.querySelector(".tenohira-video-frame video");
+          var playButton = document.querySelector(".tenohira-video-play");
+          var carousel = document.querySelector(".tenohira-carousel");
+          var track = carousel && carousel.querySelector(".tenohira-carousel-track");
+          var slides = carousel ? Array.prototype.slice.call(carousel.querySelectorAll(".tenohira-slide")) : [];
+          var prev = carousel && carousel.querySelector(".tenohira-arrow-prev");
+          var next = carousel && carousel.querySelector(".tenohira-arrow-next");
+          var dots = carousel ? Array.prototype.slice.call(carousel.querySelectorAll(".tenohira-dots span")) : [];
+          var active = 0;
+          var revealRaf = 0;
+
+          if (video && playButton) {
+            playButton.addEventListener("click", function () {
+              video.controls = true;
+              video.play().catch(function () {});
+              playButton.classList.add("is-hidden");
+              var overlay = playButton.closest(".tenohira-video-overlay");
+              if (overlay) overlay.classList.add("is-hidden");
+            });
+          }
+
+          function clamp(value, min, max) {
+            return Math.max(min, Math.min(max, value));
+          }
+
+          function updateRevealProgress() {
+            var viewport = window.innerHeight || 1;
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+            revealItems.forEach(function (item, index) {
+              if (reduceMotion) {
+                item.style.setProperty("--reveal-progress", "1");
+                return;
+              }
+              var rect = item.getBoundingClientRect();
+              var stagger = (Number.parseFloat(item.style.getPropertyValue("--reveal-index")) || index) * 0.045;
+              var raw = (viewport * 0.96 - rect.top) / (viewport * 0.48);
+              var progress = clamp(raw - stagger, 0, 1);
+              item.style.setProperty("--reveal-progress", progress.toFixed(3));
+            });
+            revealRaf = requestAnimationFrame(updateRevealProgress);
+          }
+
+          revealItems.forEach(function (item) {
+            if (!item.style.getPropertyValue("--reveal-progress")) {
+              item.style.setProperty("--reveal-progress", "0");
+            }
+          });
+          updateRevealProgress();
+
+          function updateCarousel() {
+            if (!track || !slides.length) return;
+            track.style.transform = "translate3d(" + -active * 100 + "%, 0, 0)";
+            dots.forEach(function (dot, index) {
+              dot.classList.toggle("is-active", index === active);
+            });
+          }
+
+          function go(direction) {
+            if (!slides.length) return;
+            active = (active + direction + slides.length) % slides.length;
+            updateCarousel();
+          }
+
+          if (prev && next) {
+            prev.addEventListener("click", function () {
+              go(-1);
+            });
+            next.addEventListener("click", function () {
+              go(1);
+            });
+          }
+          updateCarousel();
+
+          return function () {
+            cancelAnimationFrame(revealRaf);
+          };
+        }
+
+        function setupSatouLightbox() {
+          var lightbox = document.querySelector(".satou-lightbox");
+          var lightboxImage = lightbox && lightbox.querySelector("img");
+          var backdrop = lightbox && lightbox.querySelector(".satou-lightbox-backdrop");
+          var cards = Array.prototype.slice.call(document.querySelectorAll(".satou-float-card"));
+          if (!lightbox || !lightboxImage || !backdrop || !cards.length) return function () {};
+
+          function open(card) {
+            lightboxImage.src = card.dataset.src || "";
+            lightboxImage.alt = card.dataset.alt || "";
+            lightbox.classList.add("is-open");
+            lightbox.setAttribute("aria-hidden", "false");
+            document.documentElement.classList.add("has-satou-lightbox");
+            document.documentElement.dataset.cursor = "";
+          }
+
+          function close() {
+            lightbox.classList.remove("is-open");
+            lightbox.setAttribute("aria-hidden", "true");
+            document.documentElement.classList.remove("has-satou-lightbox");
+            document.documentElement.dataset.cursor = "";
+          }
+
+          function handleKeydown(event) {
+            if (event.key === "Escape") close();
+          }
+
+          cards.forEach(function (card) {
+            card.addEventListener("click", function () {
+              open(card);
+            });
+          });
+          backdrop.addEventListener("click", close);
+          lightboxImage.addEventListener("click", close);
+          window.addEventListener("keydown", handleKeydown);
+
+          return function () {
+            close();
+            window.removeEventListener("keydown", handleKeydown);
+          };
+        }
+
+        function setupCursor() {
+          var canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+          var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+          var dot = document.querySelector(".cursor-dot");
+          var ring = document.querySelector(".cursor-ring");
+          if (!canHover || reduceMotion || !dot || !ring) {
+            document.documentElement.classList.remove("has-custom-cursor");
+            return function () {};
+          }
+
+          document.documentElement.classList.add("has-custom-cursor");
+          var pointerX = window.innerWidth / 2;
+          var pointerY = window.innerHeight / 2;
+          var ringX = pointerX;
+          var ringY = pointerY;
+          var raf = 0;
+
+          function move(event) {
+            pointerX = event.clientX;
+            pointerY = event.clientY;
+            dot.style.transform = "translate3d(" + pointerX + "px," + pointerY + "px,0) translate(-50%, -50%)";
+            var target = event.target;
+            var modeTarget = target && target.closest ? target.closest("[data-cursor], a, button") : null;
+            document.documentElement.dataset.cursor = (modeTarget && modeTarget.dataset.cursor) || (modeTarget ? "link" : "");
+          }
+
+          function leaveTarget(event) {
+            if (
+              !event.relatedTarget ||
+              !event.relatedTarget.closest ||
+              !event.relatedTarget.closest("[data-cursor], a, button")
+            ) {
+              document.documentElement.dataset.cursor = "";
+            }
+          }
+
+          function animate() {
+            ringX += (pointerX - ringX) * 0.16;
+            ringY += (pointerY - ringY) * 0.16;
+            ring.style.transform = "translate3d(" + ringX + "px," + ringY + "px,0) translate(-50%, -50%)";
+            raf = requestAnimationFrame(animate);
+          }
+
+          document.addEventListener("pointermove", move);
+          document.addEventListener("pointerout", leaveTarget);
+          document.addEventListener("pointerleave", function () {
+            document.documentElement.dataset.cursor = "";
+          });
+          raf = requestAnimationFrame(animate);
+
+          return function () {
+            document.removeEventListener("pointermove", move);
+            document.removeEventListener("pointerout", leaveTarget);
+            cancelAnimationFrame(raf);
+            document.documentElement.dataset.cursor = "";
+          };
+        }
+
+        window.addEventListener("hashchange", render);
+        render();
+      })();
+    </script>
+  </body>
+</html>
