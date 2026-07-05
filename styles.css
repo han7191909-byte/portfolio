@@ -911,6 +911,7 @@ html.is-work-mode .nav-work-main {
 
 .research-label {
   display: inline-flex;
+  width: max-content;
   min-width: 78px;
   min-height: 38px;
   align-items: center;
@@ -920,7 +921,7 @@ html.is-work-mode .nav-work-main {
   background: #050000;
   color: #fff;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1;
 }
 
