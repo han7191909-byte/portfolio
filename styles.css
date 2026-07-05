@@ -1451,11 +1451,11 @@ html.is-work-mode .nav-work-main {
 }
 
 .satou-text {
-  padding-top: 10px;
+  padding-top: 3px;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 13px;
   font-weight: 500;
-  line-height: 2.75;
+  line-height: 2.25;
   letter-spacing: 0.018em;
   color: #111;
 }
