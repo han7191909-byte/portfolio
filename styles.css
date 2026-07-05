@@ -1343,7 +1343,15 @@ html.is-work-mode .nav-work-main {
   position: absolute;
   inset: 0;
 }
-
+.satou-wide-text {
+  width: min(100% - 240px, 980px);
+  margin: 72px auto 88px;
+  font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 2.4;
+  letter-spacing: 0.02em;
+}
 .satou-float-card {
   position: absolute;
   width: 136px;
