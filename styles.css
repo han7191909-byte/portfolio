@@ -1079,6 +1079,7 @@ html.is-work-mode .nav-work-main {
 
 .research-feedback h3 {
   margin: 14px 0 46px;
+  margin-left: -10px;
   color: #333;
   font-size: 15px;
   font-weight: 500;
