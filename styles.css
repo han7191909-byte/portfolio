@@ -1451,7 +1451,7 @@ html.is-work-mode .nav-work-main {
 }
 
 .satou-text {
-  padding-top: 3px;
+  padding-top: 0px;
   font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
   font-size: 13px;
   font-weight: 500;
