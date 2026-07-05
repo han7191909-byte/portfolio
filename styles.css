@@ -72,7 +72,7 @@ video {
 
 .nav-link.is-active {
   background: #fff;
-  color: #000;
+  color: #000; 
   border: 0;
 }
 
